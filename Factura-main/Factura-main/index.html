@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Facturas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="invoice-generator">
+        <h1>Generador de Facturas</h1>
+
+        <!-- Formulario para añadir productos -->
+        <form id="add-product-form" class="invoice-generator__form">
+            <div class="form-group">
+                <label for="product-name">Producto:</label>
+                <input type="text" id="product-name" placeholder="Ej: Teclado Mecánico" required>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" min="0" step="0.01" placeholder="150000" required>
+            </div>
+            <div class="form-group">
+                <label for="product-quantity">Cantidad:</label>
+                <input type="number" id="product-quantity" min="1" step="1" value="1" required>
+            </div>
+            <button type="submit" class="btn btn--add">Añadir Producto</button>
+        </form>
+
+        <!-- Historial de productos (tabla) -->
+        <div class="invoice-generator__history">
+            <h2>Productos Añadidos</h2>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Las filas de productos se añadirán aquí con JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Resumen de la factura -->
+        <div class="invoice-generator__summary">
+            <div class="summary-item"><span>Subtotal:</span> <span id="summary-subtotal">$0.00</span></div>
+            <div class="summary-item"><span>Descuento (5%):</span> <span id="summary-discount">-$0.00</span></div>
+            <div class="summary-item"><span>IVA (19%):</span> <span id="summary-iva">+$0.00</span></div>
+            <div class="summary-item summary-item--total"><span>PAGO NETO:</span> <span id="summary-total">$0.00</span></div>
+            <button id="save-invoice-btn" class="btn btn--save">Guardar Factura</button>
+        </div>
+
+        <!-- Historial de Facturas Guardadas -->
+        <div class="invoice-generator__archive">
+            <h2>Historial de Facturas</h2>
+            <ul id="invoice-history-list">
+                <!-- El historial se generará aquí con JS -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ventana Modal para ver detalles del historial -->
+    <div id="history-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modal-details">
+                <!-- Los detalles de la factura histórica se cargarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/facturador.js"></script>
+</body>
+</html>
