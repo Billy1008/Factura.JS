@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web para **crear, calcular y almacenar facturas** de manera sencilla. Permite añadir productos, aplicar descuentos e IVA automáticamente, y guardar un historial de facturas para futuras consultas.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 - Añadir productos con nombre, precio y cantidad.
 - Cálculo automático de:
   - Subtotal
@@ -13,10 +13,10 @@ Este proyecto es una aplicación web para **crear, calcular y almacenar facturas
 - Guardar facturas en **LocalStorage** con historial consultable.
 - Visualización detallada de facturas anteriores mediante modal.
 
-## 🛠️ Tecnologías usadas
+##  Tecnologías usadas
 - **HTML5** – estructura del proyecto.
 - **CSS3** – estilos responsivos y diseño visual.
 - **JavaScript (ES6)** – lógica de cálculo, gestión del DOM y almacenamiento local.
 - **Visual Studio Code** – entorno de desarrollo.
 
-## 📂 Estructura del proyecto
+
